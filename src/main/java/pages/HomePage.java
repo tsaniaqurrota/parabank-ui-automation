@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class HomePage extends BasePage {
     private String homePageUrl = "https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC";
 
+    
     @FindBy(xpath = "//a[contains(@href,'register.htm')]")
     private WebElement registerButton;
 
