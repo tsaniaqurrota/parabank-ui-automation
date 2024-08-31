@@ -1,4 +1,3 @@
-@All
 Feature: User Transfer Funds
 
   @Positive @Transfer
@@ -16,9 +15,8 @@ Feature: User Transfer Funds
       | 10             |
       | 100            |
 
-
   @Negative @Transfer
-  Scenario Outline: Successful transfer with valid amount
+  Scenario Outline: Failed transfer with invalid amount
     Given User has logged in
     When User click transfer funds link button on sidebar
     And User inputs invalid "<invalidTransferAmount>"
@@ -27,6 +25,6 @@ Feature: User Transfer Funds
     Then User transfers funds failed with "<errorMessage>"
 
     Examples:
-      | invalidTransferAmount | errorMessage
-      | -1             | "Transfer amount must be greater than 0"
-      | 600            | "Insufficient balance"
+      | invalidTransferAmount | errorMessage                           |
+      | -1                    | Transfer amount must be greater than 0.|
+      | 600                   | Insufficient balance.                 |

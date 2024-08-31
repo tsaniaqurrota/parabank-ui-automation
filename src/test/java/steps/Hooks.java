@@ -18,8 +18,7 @@ public class Hooks {
     public void tearDown() {
         if (driver != null) {
             driver.quit();
-//            driver = null;
-//            extent.flush();
+
         }
     }
 
